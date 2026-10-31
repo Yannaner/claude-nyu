@@ -1,23 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Serif_4, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import ThemeProvider from "@/components/ThemeProvider";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-heading",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const sourceSerif = Source_Serif_4({
-  variable: "--font-body",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const dmSans = DM_Sans({
-  variable: "--font-ui",
+  variable: "--font-site",
   subsets: ["latin"],
   display: "swap",
 });
@@ -44,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${playfair.variable} ${sourceSerif.variable} ${dmSans.variable}`}
+        className={`${dmSans.variable}`}
       >
         <ThemeProvider>
           {children}

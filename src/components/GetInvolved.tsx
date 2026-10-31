@@ -1,6 +1,6 @@
 export default function GetInvolved() {
   return (
-    <section id="join" className="bg-[#f3eee4] px-6 pb-24 pt-6 text-[#20211f] sm:pb-32">
+    <section id="join" className="bg-claude-cream px-6 pb-24 pt-6 text-[#20211f] sm:pb-32">
       <div className="mx-auto max-w-6xl overflow-hidden bg-[#dc8060]">
         <div className="grid lg:grid-cols-[1.25fr_0.75fr]">
           <div className="relative overflow-hidden p-8 sm:p-12 lg:p-16">

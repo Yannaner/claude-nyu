@@ -1,3 +1,9 @@
+const projects = [
+  { number: '01', name: 'Orbit', category: 'Focus timer', description: 'Make space for one thing at a time.', url: 'https://claude-nyu-orbit.vercel.app/', color: '#e99778', mark: '◉' },
+  { number: '02', name: 'Pocket', category: 'Study tool', description: 'Turn your notes into a flashcard deck.', url: 'https://claude-nyu-pocket.vercel.app/', color: '#c9b7e8', mark: '✳' },
+  { number: '03', name: 'Choice Lab', category: 'Decision tool', description: 'Compare your options with clarity.', url: 'https://claude-nyu-choice.vercel.app/', color: '#d8d7a9', mark: '↗' },
+];
+
 export default function BuilderClub() {
   return (
     <section id="build" className="scroll-mt-24 bg-claude-cream px-6 py-24 sm:py-32">
@@ -5,33 +11,23 @@ export default function BuilderClub() {
         <div className="flex items-center gap-4 font-ui text-xs font-semibold uppercase tracking-[0.2em] text-claude-terracotta">
           <span>03 / The work</span><span className="h-px flex-1 bg-claude-light-gray" />
         </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-[1fr_0.65fr] md:items-end">
-          <h2 className="max-w-3xl font-heading text-5xl leading-[1.02] tracking-tight text-claude-dark sm:text-6xl lg:text-7xl">Ideas are better<br /><span className="italic text-claude-terracotta">out in the world.</span></h2>
-          <p className="max-w-sm font-body text-lg leading-relaxed text-claude-dark/75 md:justify-self-end">Discover what students are building with Claude.</p>
+        <div className="mt-8 flex flex-wrap items-end justify-between gap-6">
+          <h2 className="font-heading text-5xl leading-[1.02] tracking-tight text-claude-dark sm:text-6xl">Ideas in <em className="text-claude-terracotta">action.</em></h2>
+          <p className="max-w-xs font-body text-base text-claude-dark/70">Three working prototypes to explore.</p>
         </div>
-
-        <div className="relative mt-14 overflow-hidden bg-[#1c1b19] text-[#faf9f5]">
-          <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full border border-[#d08a70]/25 sm:h-[28rem] sm:w-[28rem]" aria-hidden="true">
-            <div className="absolute inset-[15%] rounded-full border border-[#d08a70]/25" /><div className="absolute inset-[30%] rounded-full border border-[#d08a70]/25" /><div className="absolute left-1/2 top-1/2 h-4 w-4 rounded-full bg-[#d08a70]" />
-          </div>
-          <div className="relative grid gap-12 p-8 sm:p-12 md:grid-cols-[1fr_0.65fr] md:p-14">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#dfa990]">Across the community ↗</p>
-              <h3 className="mt-6 max-w-lg font-heading text-4xl leading-tight sm:text-5xl">See what student builders are making.</h3>
-              <p className="mt-5 max-w-lg font-body text-base leading-relaxed text-[#dedbd2]">Explore projects by students beyond NYU, or share your own.</p>
-              <a href="https://claude-showcase.vercel.app/" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-5 border-b border-[#dfa990] pb-2 font-ui text-sm font-semibold text-[#fff] hover:text-[#dfa990] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#dfa990]">Explore the Claude Showcase <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
-            </div>
-            <div className="flex flex-col justify-end border-t border-white/20 pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
-              <p className="font-mono text-xs uppercase tracking-[0.18em] text-[#c8c2b6]">A few places to start</p>
-              <ul className="mt-5 space-y-3 font-heading text-xl text-[#faf9f5]">
-                <li>01 <span className="ml-4">Creative tools</span></li>
-                <li>02 <span className="ml-4">Productivity</span></li>
-                <li>03 <span className="ml-4">Games &amp; experiments</span></li>
-              </ul>
-              <a href="#join" className="mt-8 w-fit font-ui text-sm font-semibold text-[#dfa990] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#dfa990]">Build with us at NYU →</a>
-            </div>
-          </div>
+        <div className="mt-12 grid gap-4 md:grid-cols-3">
+          {projects.map((project) => (
+            <a key={project.name} href={project.url} target="_blank" rel="noopener noreferrer" className="group flex min-h-72 flex-col rounded-2xl border border-claude-dark/10 bg-claude-warm-white p-7 text-claude-dark transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-claude-terracotta motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+              <div className="flex items-start justify-between"><span className="font-mono text-xs text-claude-dark/55">{project.number} / {project.category}</span><span aria-hidden="true" className="text-2xl">↗</span></div>
+              <div className="mt-10 flex h-14 w-14 items-center justify-center rounded-full text-2xl text-[#20211f]" style={{ backgroundColor: project.color }} aria-hidden="true">{project.mark}</div>
+              <h3 className="mt-6 font-heading text-3xl">{project.name}</h3>
+              <p className="mt-2 font-body text-sm text-claude-dark/70">{project.description}</p>
+              <span className="mt-auto pt-6 font-ui text-xs font-semibold uppercase tracking-wider text-claude-terracotta">Try it <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></span>
+            </a>
+          ))}
         </div>
+        <p className="mt-5 font-ui text-xs leading-relaxed text-claude-dark/60">These are showcase prototypes. They work locally in your browser and do not connect to Claude.</p>
+        <a href="https://claude-showcase.vercel.app/" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 border-b border-claude-terracotta pb-1 font-ui text-sm font-semibold text-claude-dark hover:text-claude-terracotta">Explore the wider Claude Showcase <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
       </div>
     </section>
   );

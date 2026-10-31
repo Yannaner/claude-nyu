@@ -19,6 +19,8 @@ html.dark {
   --claude-warm-white: #1a1a1a;
   --claude-sand: #2a2a2a;
   --claude-mid-gray: #aaa;
+  --claude-terracotta: #edaa90;
+  --claude-terracotta-deep: #f3bda8;
   --claude-light-gray: #2a2a2a;
 }
 
@@ -34,9 +36,9 @@ html.dark {
   --color-claude-blue: var(--claude-blue);
   --color-claude-light-gray: var(--claude-light-gray);
 
-  --font-heading: "Playfair Display", serif;
-  --font-body: "Source Serif 4", serif;
-  --font-ui: "DM Sans", sans-serif;
+  --font-heading: var(--font-site), sans-serif;
+  --font-body: var(--font-site), sans-serif;
+  --font-ui: var(--font-site), sans-serif;
   --font-mono: "DM Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
 }
 
@@ -138,3 +140,5 @@ section[id] { scroll-margin-top: 5rem; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+em { font-style: normal; }
