@@ -48,34 +48,34 @@ const icons: Record<string, React.ReactNode> = {
 
 const DETAIL_BLURBS: Record<string, string[]> = {
   hackathon: [
-    'Weekend-long builds where you go from idea to working prototype.',
-    'Teams form on the spot — no prior experience required.',
-    'Past projects: campus bots, accessibility tools, AI tutors.',
+    'Turn an idea into a project with other students.',
+    'Explore problems that matter to you and your community.',
+    'All levels of experience are welcome.',
   ],
   workshop: [
-    'Hands-on sessions covering prompting, Claude API, and no-code tools.',
-    'Small groups so everyone gets help.',
-    'Walk out with something you actually built.',
+    'Practice with Claude through hands-on activities.',
+    'Explore tools and techniques at your own pace.',
+    'Bring questions and learn alongside other builders.',
   ],
   demo: [
-    'Present your project to the club. Get real feedback.',
-    'See what others are building and get inspired.',
-    'Best demos get featured on our socials.',
+    'Share a project or idea with the community.',
+    'Learn from the approaches other students take.',
+    'Find inspiration for what you might build next.',
   ],
   speaker: [
-    'Conversations with Anthropic engineers and AI researchers.',
-    'Panels on AI × your field — humanities, design, business, and more.',
-    'Q&A format so you can actually ask what you want.',
+    'Explore AI through different fields and perspectives.',
+    'Learn from people working on meaningful problems.',
+    'Ask questions and share ideas with the community.',
   ],
   office: [
-    'Drop in with your project and get unstuck.',
-    'Mentors available for prompting, API help, and architecture.',
-    'Bring your laptop. Leave with working code.',
+    'Bring your questions and ideas to the community.',
+    'Learn from fellow students as you work on projects.',
+    'Explore ways to take your next step.',
   ],
   community: [
-    'A Discord, a group chat, and real friendships.',
-    'Every major, every year, every skill level.',
-    'The kind of club where you actually show up.',
+    'Meet students who are curious about building with AI.',
+    'Every major, every year, every skill level is welcome.',
+    'Learn, share ideas, and create together.',
   ],
 };
 

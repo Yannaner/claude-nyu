@@ -1,78 +1,33 @@
 import type { ClubEvent, Benefit, FAQItem, ProjectCard, ActivityCard, GalleryItem } from './types';
 
-export const EVENTS: ClubEvent[] = [
-  {
-    id: 'prompt-workshop',
-    date: '2026-03-05',
-    time: '6:00 PM',
-    title: 'Prompt Engineering Workshop',
-    location: 'Bobst Library, Room 424',
-    category: 'workshop',
-    description: 'Learn to write prompts that get better results from Claude.',
-  },
-  {
-    id: 'builder-kickoff',
-    date: '2026-03-12',
-    time: '7:00 PM',
-    title: 'Builder Club Kickoff',
-    location: 'Leslie eLab',
-    category: 'social',
-    description: 'Meet fellow builders and pick your first project.',
-  },
-  {
-    id: 'weekend-hackathon',
-    date: '2026-03-22',
-    time: '10:00 AM',
-    title: 'Weekend Hackathon',
-    location: 'Tandon MakerSpace',
-    category: 'hackathon',
-    description: 'Two days. Any idea. Ship something real.',
-  },
-  {
-    id: 'demo-night-1',
-    date: '2026-04-02',
-    time: '6:30 PM',
-    title: 'Demo Night #1',
-    location: 'Kimmel Center',
-    category: 'demo',
-    description: 'Show off your projects and get feedback from the community.',
-  },
-  {
-    id: 'ai-humanities-panel',
-    date: '2026-04-16',
-    time: '5:00 PM',
-    title: 'AI × Humanities Panel',
-    location: 'Silver Center, Room 503',
-    category: 'speaker',
-    description: 'A conversation about AI\'s role in the humanities.',
-  },
-];
+// Add confirmed NYU events here when dates and locations are available.
+export const EVENTS: ClubEvent[] = [];
 
 export const ACTIVITIES: ActivityCard[] = [
   {
     icon: 'hackathon',
     title: 'Hackathons',
-    description: 'Weekend builds where any student can ship an AI project.',
+    description: 'Bring an idea, collaborate with other students, and build with Claude.',
   },
   {
     icon: 'workshop',
     title: 'Workshops',
-    description: 'Hands-on sessions: prompting, API basics, no-code building.',
+    description: 'Practice building with Claude through hands-on sessions for different experience levels.',
   },
   {
     icon: 'demo',
-    title: 'Demo Nights',
-    description: 'Show what you\'ve built. Get feedback. Get inspired.',
+    title: 'Project Sharing',
+    description: 'Share what you are working on and learn from other builders.',
   },
   {
     icon: 'speaker',
     title: 'Speaker Events',
-    description: 'Conversations with Anthropic engineers and AI researchers.',
+    description: 'Explore AI ideas and learn from different perspectives.',
   },
   {
     icon: 'office',
-    title: 'Office Hours',
-    description: 'Drop in for help with your Claude-powered projects.',
+    title: 'Learning Together',
+    description: 'Ask questions, exchange ideas, and develop new skills with peers.',
   },
   {
     icon: 'community',
@@ -91,45 +46,38 @@ export const PROJECTS: ProjectCard[] = [
 ];
 
 export const BENEFITS: Benefit[] = [
-  { number: '01', title: 'Free API Credits', description: 'Build with Claude at no cost.' },
-  { number: '02', title: 'Ship Real Projects', description: 'Go from idea to working prototype in a weekend.' },
-  { number: '03', title: 'Insider Access', description: 'Private sessions with Anthropic engineers.' },
-  { number: '04', title: 'Any Major Welcome', description: 'You don\'t need to code. Claude handles that part.' },
-  { number: '05', title: 'Build Your Portfolio', description: 'Tangible projects that stand out on a resume.' },
-  { number: '06', title: 'Global Network', description: 'Connect with student builders at 50+ universities.' },
+  { number: '01', title: 'Learn by Building', description: 'Explore Claude through hands-on projects and workshops.' },
+  { number: '02', title: 'All Majors Welcome', description: 'Join whether you are new to building or already have experience.' },
+  { number: '03', title: 'Find Your Community', description: 'Meet students with different skills, interests, and ideas.' },
+  { number: '04', title: 'Share Your Work', description: 'Get feedback, learn from others, and grow your ideas together.' },
+  { number: '05', title: 'Think Critically', description: 'Explore both the possibilities and the responsibilities of using AI.' },
+  { number: '06', title: 'Keep Exploring', description: 'Try creative, technical, and interdisciplinary projects at your own pace.' },
 ];
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: 'Do I need to code?',
-    answer: 'No. Claude lets anyone build software. All majors welcome.',
+    question: 'Do I need to know how to code?',
+    answer: 'No. Students of every major and experience level are welcome, including those who have never written code.',
   },
   {
-    question: 'What\'s the time commitment?',
-    answer: 'Totally flexible. Come to events, build at your own pace.',
-  },
-  {
-    question: 'How do I get API credits?',
-    answer: 'Join the club and apply through our portal. Most members are approved within a week.',
+    question: 'What happens at the club?',
+    answer: 'The club brings students together to learn, explore ideas, share projects, and build with Claude.',
   },
   {
     question: 'What can I build?',
-    answer: 'Anything. Study tools, research assistants, creative projects, startup prototypes.',
+    answer: 'You might explore study tools, research projects, creative ideas, or something entirely different. Start with a problem or idea that interests you.',
+  },
+  {
+    question: 'Are Claude developer credits available?',
+    answer: 'Ask the club team about current credit availability, eligibility, and how to apply.',
   },
   {
     question: 'How do I join?',
-    answer: 'Fill out the interest form. We welcome new members every semester.',
+    answer: 'Use the sign-up link on this page to get started and hear about club activities.',
   },
 ];
 
-export const GALLERY_ITEMS: GalleryItem[] = [
-  { label: 'Hackathon F\'25', date: 'Fall 2025', gradient: 'from-[#d97757]/30 to-[#e8e0d0]', aspectRatio: 'aspect-[4/3]' },
-  { label: 'Workshop: Prompting 101', date: 'Oct 2025', gradient: 'from-[#788c5d]/20 to-[#e8e0d0]', aspectRatio: 'aspect-square' },
-  { label: 'Demo Night #1', date: 'Nov 2025', gradient: 'from-[#6a9bcc]/20 to-[#f4f3ee]', aspectRatio: 'aspect-[3/4]' },
-  { label: 'Builder Club Kickoff', date: 'Sep 2025', gradient: 'from-[#d97757]/20 to-[#f4f3ee]', aspectRatio: 'aspect-[4/3]' },
-  { label: 'AI × Policy Panel', date: 'Nov 2025', gradient: 'from-[#788c5d]/30 to-[#e8e0d0]', aspectRatio: 'aspect-square' },
-  { label: 'Social: Claude & Coffee', date: 'Dec 2025', gradient: 'from-[#6a9bcc]/30 to-[#e8e0d0]', aspectRatio: 'aspect-[3/4]' },
-];
+export const GALLERY_ITEMS: GalleryItem[] = [];
 
 export const EVENT_FILTERS = ['All', 'Workshops', 'Hackathons', 'Socials'] as const;
 

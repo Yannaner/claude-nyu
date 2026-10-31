@@ -1,37 +1,7 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
 import { BENEFITS } from '@/lib/constants';
-
-const quoteWords = 'I built my first real project in a weekend and it actually works.'.split(' ');
-
-function AnimatedQuote() {
-  const ref = useRef<HTMLQuoteElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
-
-  return (
-    <blockquote ref={ref} className="font-heading text-3xl leading-snug text-claude-dark italic sm:text-4xl">
-      &ldquo;
-      {quoteWords.map((word, i) => (
-        <motion.span
-          key={i}
-          initial={{ opacity: 0, y: 8 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: i * 0.08, duration: 0.4 }}
-          className="inline-block mr-[0.3em]"
-        >
-          {word}
-        </motion.span>
-      ))}
-      &rdquo;
-      <footer className="mt-4 font-ui text-sm not-italic text-claude-mid-gray">
-        — Builder Club Member
-      </footer>
-    </blockquote>
-  );
-}
 
 export default function WhyJoin() {
   return (
@@ -44,7 +14,7 @@ export default function WhyJoin() {
         </ScrollReveal>
 
         <div className="mt-12 grid gap-16 lg:grid-cols-2 lg:gap-20">
-          <AnimatedQuote />
+          <div><h3 className="font-heading text-3xl leading-snug text-claude-dark sm:text-4xl">Curiosity is a good place to start.</h3><p className="mt-5 max-w-md font-body text-base leading-relaxed text-claude-mid-gray">Bring an idea, learn alongside other students, and explore both the possibilities and responsibilities of building with AI.</p></div>
 
           <div className="space-y-6">
             {BENEFITS.map((benefit, i) => (

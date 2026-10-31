@@ -36,7 +36,7 @@ export default function GetInvolved() {
               </li>
               <li className="flex items-start gap-2 font-body text-sm text-claude-dark/70">
                 <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-claude-terracotta" />
-                Free API credits available
+                Learn about developer credits and eligibility
               </li>
               <li className="flex items-start gap-2 font-body text-sm text-claude-dark/70">
                 <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-claude-terracotta" />

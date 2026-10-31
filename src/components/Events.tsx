@@ -27,7 +27,7 @@ export default function Events() {
               Coming soon
             </p>
             <p className="mt-2 max-w-sm text-center font-body text-sm text-claude-mid-gray">
-              We&apos;re planning workshops, hackathons, and demo nights for this semester. Follow us to get notified.
+              Event details will be shared when they&apos;re confirmed. Join the club to hear about upcoming opportunities.
             </p>
           </div>
         </ScrollReveal>
