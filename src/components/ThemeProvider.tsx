@@ -1,52 +1,48 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useSyncExternalStore } from 'react';
 
 type Theme = 'light' | 'dark';
 
-const ThemeContext = createContext<{
-  theme: Theme;
-  toggle: () => void;
-}>({ theme: 'light', toggle: () => {} });
+const ThemeContext = createContext<{ theme: Theme; toggle: () => void }>({ theme: 'light', toggle: () => {} });
+const THEME_EVENT = 'claude-nyu-theme-change';
+
+function getTheme(): Theme {
+  try {
+    return localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+  } catch {
+    return 'light';
+  }
+}
+
+function subscribe(callback: () => void) {
+  window.addEventListener('storage', callback);
+  window.addEventListener(THEME_EVENT, callback);
+  return () => {
+    window.removeEventListener('storage', callback);
+    window.removeEventListener(THEME_EVENT, callback);
+  };
+}
 
 export function useTheme() {
   return useContext(ThemeContext);
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('light');
-  const [mounted, setMounted] = useState(false);
+  const theme = useSyncExternalStore<Theme>(subscribe, getTheme, () => 'light');
 
   useEffect(() => {
-    const stored = localStorage.getItem('theme') as Theme | null;
-    if (stored === 'dark') {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-    setMounted(true);
-  }, []);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }, [theme]);
 
   const toggle = () => {
-    setTheme(prev => {
-      const next = prev === 'light' ? 'dark' : 'light';
-      localStorage.setItem('theme', next);
-      if (next === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      return next;
-    });
+    try {
+      localStorage.setItem('theme', theme === 'light' ? 'dark' : 'light');
+      window.dispatchEvent(new Event(THEME_EVENT));
+    } catch {
+      // The page remains usable if storage is unavailable.
+    }
   };
 
-  // Prevent flash of wrong theme
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
-  return (
-    <ThemeContext.Provider value={{ theme, toggle }}>
-      {children}
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={{ theme, toggle }}>{children}</ThemeContext.Provider>;
 }

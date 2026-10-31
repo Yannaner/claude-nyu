@@ -13,8 +13,9 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <>
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-lg focus:bg-claude-cream focus:px-4 focus:py-3 focus:font-ui focus:text-claude-dark">Skip to content</a>
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <AtAGlance />
         <WhatWeDo />

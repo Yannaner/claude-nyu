@@ -5,9 +5,9 @@
   --claude-cream: #faf9f5;
   --claude-warm-white: #f4f3ee;
   --claude-sand: #e8e0d0;
-  --claude-mid-gray: #b0aea5;
-  --claude-terracotta: #d97757;
-  --claude-terracotta-deep: #c15f3c;
+  --claude-mid-gray: #706d66;
+  --claude-terracotta: #a95032;
+  --claude-terracotta-deep: #8c3f27;
   --claude-sage: #788c5d;
   --claude-blue: #6a9bcc;
   --claude-light-gray: #e8e6dc;
@@ -18,7 +18,7 @@ html.dark {
   --claude-cream: #121212;
   --claude-warm-white: #1a1a1a;
   --claude-sand: #2a2a2a;
-  --claude-mid-gray: #777;
+  --claude-mid-gray: #aaa;
   --claude-light-gray: #2a2a2a;
 }
 
@@ -130,4 +130,11 @@ html.dark .bg-white\/50 {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+:focus-visible { outline: 2px solid var(--claude-terracotta-deep); outline-offset: 3px; }
+section[id] { scroll-margin-top: 5rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
