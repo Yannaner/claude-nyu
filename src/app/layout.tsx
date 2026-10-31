@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "The Claude Builder Club at New York University. Build AI-powered projects with Claude. All majors welcome.",
   metadataBase: new URL("https://claude-nyu.vercel.app"),
   alternates: { canonical: "/" },
-  openGraph: { title: "Claude at NYU — Builder Club", description: "Build, learn, and create with the Claude Builder Club at NYU.", url: "/", images: ["/collaboration-art.webp"] },
+  openGraph: { title: "Claude at NYU — Builder Club", description: "Build, learn, and create with the Claude Builder Club at NYU.", url: "/", images: ["/collaboration-art-v2.webp"] },
   twitter: { card: "summary_large_image" },
   icons: {
     icon: "/claude-logo.svg",

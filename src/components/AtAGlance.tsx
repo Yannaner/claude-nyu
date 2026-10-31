@@ -1,20 +1,8 @@
-const stats = [
-  { label: 'All majors welcome', symbol: '∞' },
-  { label: 'No experience needed', symbol: '0' },
-  { label: 'Free to join', symbol: '$0' },
+const items = [
+  { number: '01', title: 'Come curious', text: 'Every major and every experience level is welcome.' },
+  { number: '02', title: 'Learn by doing', text: 'Explore tools, share ideas, and build alongside others.' },
+  { number: '03', title: 'Make connections', text: 'Find people who want to make something meaningful.' },
 ];
-
 export default function AtAGlance() {
-  return (
-    <section className="px-6 py-24">
-      <div className="mx-auto flex max-w-3xl flex-col items-center justify-center divide-y divide-claude-light-gray sm:flex-row sm:divide-x sm:divide-y-0">
-        {stats.map((stat) => (
-          <div key={stat.label} className="flex flex-col items-center px-8 py-4">
-            <span className="font-heading text-4xl text-claude-dark sm:text-5xl">{stat.symbol}</span>
-            <span className="mt-2 font-body text-sm italic text-claude-mid-gray">{stat.label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+  return <section className="bg-[#e99778] px-6 py-12 text-[#191716] sm:px-10 sm:py-16 xl:px-16"><div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3 md:gap-0">{items.map((item) => <div key={item.number} className="border-t border-[#191716]/30 pt-5 md:border-l md:border-t-0 md:px-8 md:first:border-l-0 md:first:pl-0"><span className="font-mono text-xs">/{item.number}</span><h2 className="mt-5 font-heading text-2xl sm:text-3xl">{item.title}</h2><p className="mt-3 max-w-xs font-ui text-sm leading-relaxed text-[#191716]/75">{item.text}</p></div>)}</div></section>;
 }

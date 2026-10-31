@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { NAV_LINKS } from '@/lib/constants';
 import { useTheme } from './ThemeProvider';
 
-const focusClass = 'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-claude-terracotta';
+const focusClass = 'focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#edaa90]';
 
 function ThemeToggle() {
   const { theme, toggle } = useTheme();
@@ -13,7 +13,7 @@ function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className={`flex h-11 w-11 items-center justify-center rounded-full border border-claude-light-gray text-claude-dark hover:bg-claude-warm-white ${focusClass}`}
+      className={`flex h-11 w-11 items-center justify-center rounded-full text-[#f9f7ef] hover:bg-white/10 ${focusClass}`}
       aria-label={theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode'}
     >
       {theme === 'light' ? (
@@ -47,17 +47,17 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-claude-light-gray bg-claude-cream/95 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#171715]/65 backdrop-blur-xl backdrop-saturate-150">
       <nav aria-label="Main navigation" className="mx-auto max-w-6xl px-6">
-        <div className="flex min-h-[72px] items-center justify-between gap-4">
+        <div className="flex min-h-[56px] items-center justify-between gap-4">
           <a href="#" className={`flex shrink-0 items-center gap-2 rounded-sm ${focusClass}`} aria-label="Claude at NYU, back to top">
-            <Image src="/claude-logo.svg" alt="" width={25} height={25} />
-            <span className="font-heading text-lg tracking-tight text-claude-dark">Claude at NYU</span>
+            <Image src="/claude-logo.svg" alt="" width={21} height={21} />
+            <span className="font-ui text-[13px] font-semibold tracking-tight text-[#f9f7ef]">Claude at NYU<span className="mt-0.5 block text-[8px] font-medium uppercase tracking-[0.14em] text-[#edaa90]">Builder Club</span></span>
           </a>
 
           <div className="hidden items-center gap-7 md:flex">
             {NAV_LINKS.map(link => (
-              <a key={link.href} href={link.href} className={`rounded-sm font-ui text-sm text-claude-dark/75 hover:text-claude-dark ${focusClass}`}>
+              <a key={link.href} href={link.href} className={`rounded-sm font-ui text-xs font-semibold uppercase tracking-[0.13em] text-white/90 hover:text-white ${focusClass}`}>
                 {link.label}
               </a>
             ))}
@@ -65,7 +65,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
-            <a href="https://www.jotform.com/253555944387168" target="_blank" rel="noopener noreferrer" className={`hidden rounded-full bg-claude-dark px-5 py-3 font-ui text-sm font-medium text-claude-cream hover:opacity-85 md:inline-flex ${focusClass}`}>
+            <a href="https://www.jotform.com/253555944387168" target="_blank" rel="noopener noreferrer" className={`hidden rounded-full min-h-10 items-center bg-[#d97757] px-4 py-2 font-ui text-xs font-semibold text-[#171715] hover:bg-[#efaa91] md:inline-flex ${focusClass}`}>
               Join the club <span aria-hidden="true" className="ml-2">↗</span>
             </a>
             <button
@@ -75,7 +75,7 @@ export default function Navbar() {
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-              className={`flex h-11 w-11 items-center justify-center rounded-full border border-claude-light-gray text-claude-dark hover:bg-claude-warm-white md:hidden ${focusClass}`}
+              className={`flex h-11 w-11 items-center justify-center rounded-full text-[#f9f7ef] hover:bg-white/10 md:hidden ${focusClass}`}
             >
               {mobileOpen ? (
                 <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" strokeWidth="1.5" /></svg>
@@ -86,14 +86,14 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div id="mobile-menu" hidden={!mobileOpen} className="border-t border-claude-light-gray pb-6 pt-3 md:hidden">
+        <div id="mobile-menu" hidden={!mobileOpen} className="-mx-6 max-h-[calc(100svh-56px)] overflow-y-auto border-t border-white/15 bg-[#171715]/95 px-6 pb-6 pt-3 md:hidden">
           <div className="flex flex-col">
             {NAV_LINKS.map(link => (
-              <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className={`rounded-sm py-3 font-ui text-base text-claude-dark ${focusClass}`}>
+              <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className={`rounded-sm py-3 font-ui text-base font-medium text-[#f9f7ef] ${focusClass}`}>
                 {link.label}
               </a>
             ))}
-            <a href="https://www.jotform.com/253555944387168" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className={`mt-3 inline-flex w-fit rounded-full bg-claude-dark px-5 py-3 font-ui text-sm font-medium text-claude-cream hover:opacity-85 ${focusClass}`}>
+            <a href="https://www.jotform.com/253555944387168" target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)} className={`mt-3 inline-flex w-fit rounded-full bg-[#d97757] px-5 py-3 font-ui text-sm font-semibold text-[#171715] hover:bg-[#efaa91] ${focusClass}`}>
               Join the club <span aria-hidden="true" className="ml-2">↗</span>
             </a>
           </div>
