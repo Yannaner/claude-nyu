@@ -7,7 +7,7 @@ export default function BuilderClub() {
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-[1fr_0.65fr] md:items-end">
           <h2 className="max-w-3xl font-heading text-5xl leading-[1.02] tracking-tight text-claude-dark sm:text-6xl lg:text-7xl">Ideas are better<br /><span className="italic text-claude-terracotta">out in the world.</span></h2>
-          <p className="max-w-sm font-body text-lg leading-relaxed text-claude-dark/75 md:justify-self-end">Start with a question. Make something new. Share it with people who want to see where it goes.</p>
+          <p className="max-w-sm font-body text-lg leading-relaxed text-claude-dark/75 md:justify-self-end">Discover what students are building with Claude.</p>
         </div>
 
         <div className="relative mt-14 overflow-hidden bg-[#1c1b19] text-[#faf9f5]">
@@ -18,7 +18,7 @@ export default function BuilderClub() {
             <div>
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-[#dfa990]">Across the community ↗</p>
               <h3 className="mt-6 max-w-lg font-heading text-4xl leading-tight sm:text-5xl">See what student builders are making.</h3>
-              <p className="mt-5 max-w-lg font-body text-base leading-relaxed text-[#dedbd2]">Explore the Claude Showcase for projects by students at universities beyond NYU. Find inspiration, discover new ideas, and share a build of your own.</p>
+              <p className="mt-5 max-w-lg font-body text-base leading-relaxed text-[#dedbd2]">Explore projects by students beyond NYU, or share your own.</p>
               <a href="https://claude-showcase.vercel.app/" target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-5 border-b border-[#dfa990] pb-2 font-ui text-sm font-semibold text-[#fff] hover:text-[#dfa990] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#dfa990]">Explore the Claude Showcase <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
             </div>
             <div className="flex flex-col justify-end border-t border-white/20 pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">

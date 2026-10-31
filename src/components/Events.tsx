@@ -17,12 +17,12 @@ export default function Events() {
           </div>
 
           <article className="md:pt-2">
-            <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-[#edaa90]">In collaboration with</p>
+            <p className="font-ui text-xs font-semibold uppercase tracking-[0.2em] text-[#edaa90]">With</p>
             <h2 className="mt-5 font-heading text-4xl leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
               Claude at NYU <span className="text-[#d97757]">×</span><br />Tech@NYU
             </h2>
             <p className="mt-6 max-w-lg font-body text-lg leading-relaxed text-white/70">
-              Join us for an upcoming event with Tech@NYU. More details are on the way.
+              Details coming soon.
             </p>
             <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-white/20 pt-6 font-ui text-sm">
               <div><dt className="text-white/55">Time</dt><dd className="mt-2 font-medium">To be announced</dd></div>

@@ -7,32 +7,32 @@ export const ACTIVITIES: ActivityCard[] = [
   {
     icon: 'hackathon',
     title: 'Hackathons',
-    description: 'Bring an idea, collaborate with other students, and build with Claude.',
+    description: 'Build together with Claude.',
   },
   {
     icon: 'workshop',
     title: 'Workshops',
-    description: 'Practice building with Claude through hands-on sessions for different experience levels.',
+    description: 'Learn by doing, at any level.',
   },
   {
     icon: 'demo',
     title: 'Project Sharing',
-    description: 'Share what you are working on and learn from other builders.',
+    description: 'Show your work. Get inspired.',
   },
   {
     icon: 'speaker',
     title: 'Speaker Events',
-    description: 'Explore AI ideas and learn from different perspectives.',
+    description: 'Hear new perspectives on AI.',
   },
   {
     icon: 'office',
     title: 'Learning Together',
-    description: 'Ask questions, exchange ideas, and develop new skills with peers.',
+    description: 'Ask questions and learn together.',
   },
   {
     icon: 'community',
     title: 'Community',
-    description: 'A space for every major to explore what AI makes possible.',
+    description: 'Meet curious minds from every major.',
   },
 ];
 
@@ -57,23 +57,23 @@ export const BENEFITS: Benefit[] = [
 export const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Do I need to know how to code?',
-    answer: 'No. Students of every major and experience level are welcome, including those who have never written code.',
+    answer: 'No. All majors and experience levels are welcome.',
   },
   {
     question: 'What happens at the club?',
-    answer: 'The club brings students together to learn, explore ideas, share projects, and build with Claude.',
+    answer: 'Learn, share projects, and build with Claude.',
   },
   {
     question: 'What can I build?',
-    answer: 'You might explore study tools, research projects, creative ideas, or something entirely different. Start with a problem or idea that interests you.',
+    answer: 'Study tools, creative projects, research, and more.',
   },
   {
     question: 'Are Claude developer credits available?',
-    answer: 'Ask the club team about current credit availability, eligibility, and how to apply.',
+    answer: 'Ask the club team about availability and eligibility.',
   },
   {
     question: 'How do I join?',
-    answer: 'Use the sign-up link on this page to get started and hear about club activities.',
+    answer: 'Use the join link on this page.',
   },
 ];
 

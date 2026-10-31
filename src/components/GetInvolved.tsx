@@ -7,7 +7,7 @@ export default function GetInvolved() {
             <div className="relative z-10">
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-[#20211f]/75">Claude Builder Club / NYU</p>
               <h2 className="mt-8 max-w-2xl font-heading text-5xl leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">Your next idea<br /><em>starts here.</em></h2>
-              <p className="mt-6 max-w-md font-body text-lg leading-relaxed text-[#20211f]/80">Whatever you&apos;re curious about, there&apos;s room to explore it here. No coding experience required.</p>
+              <p className="mt-6 max-w-md font-body text-lg leading-relaxed text-[#20211f]/80">All majors welcome. No coding experience needed.</p>
               <a href="https://www.jotform.com/253555944387168" target="_blank" rel="noopener noreferrer" className="mt-9 inline-flex items-center gap-8 rounded-full bg-[#20211f] px-6 py-4 font-ui text-sm font-semibold text-[#f9f5ec] transition-colors hover:bg-[#41413b] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#20211f]">Join the club <span aria-hidden="true">↗</span></a>
               <p className="mt-3 font-ui text-xs text-[#20211f]/70">Sign-up form opens in a new tab.</p>
             </div>
@@ -17,8 +17,8 @@ export default function GetInvolved() {
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#20211f]/70">Come as you are</p>
             <ul className="mt-8 space-y-6 font-body text-lg leading-relaxed">
               <li className="flex gap-4"><span className="font-mono text-xs text-[#20211f]/60">01</span> Build projects with Claude</li>
-              <li className="flex gap-4"><span className="font-mono text-xs text-[#20211f]/60">02</span> Meet curious people across majors</li>
-              <li className="flex gap-4"><span className="font-mono text-xs text-[#20211f]/60">03</span> Learn about developer credits and eligibility</li>
+              <li className="flex gap-4"><span className="font-mono text-xs text-[#20211f]/60">02</span> Meet other builders</li>
+              <li className="flex gap-4"><span className="font-mono text-xs text-[#20211f]/60">03</span> Ask about developer credits</li>
             </ul>
             <p className="mt-14 border-t border-[#20211f]/25 pt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-[#20211f]/65">Build together. Think critically.</p>
           </div>

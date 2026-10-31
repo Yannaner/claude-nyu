@@ -14,21 +14,19 @@ export default function Hero() {
             Make ideas<br /><span className="text-[#e99778]">move.</span>
           </h1>
           <p className="mt-8 max-w-md font-ui text-base leading-relaxed text-[#e4ddd3] sm:text-lg">
-            A community for curious minds building with Claude. Bring your ideas, meet your people, and make something real.
+            Build with Claude. Find your people at NYU.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a href="https://www.jotform.com/253555944387168" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-12 items-center gap-5 rounded-full bg-[#e99778] px-6 py-3 font-ui text-sm font-semibold text-[#171715] transition-colors hover:bg-[#f4b69e]">Join the club <span aria-hidden="true">↗</span></a>
-            <a href="#events" className="inline-flex min-h-12 items-center gap-4 rounded-full border border-white/30 px-6 py-3 font-ui text-sm font-medium text-white transition-colors hover:bg-white/10">What&apos;s happening <span aria-hidden="true">↓</span></a>
+            <a href="#events" className="inline-flex min-h-12 items-center gap-4 rounded-full border border-white/30 px-6 py-3 font-ui text-sm font-medium text-white transition-colors hover:bg-white/10">Events <span aria-hidden="true">↓</span></a>
           </div>
-          <div className="mt-12 flex flex-wrap gap-x-7 gap-y-2 border-t border-white/20 pt-5 font-ui text-xs uppercase tracking-[0.13em] text-[#c9c1b8]">
-            <span>All majors</span><span>All experience levels</span><span>New York City</span>
-          </div>
+
         </div>
         <div className="relative flex h-[260px] items-end justify-end sm:h-[340px] lg:h-[min(640px,72vh)]">
           <div className="rounded-full border border-white/30 bg-black/30 px-4 py-2 font-ui text-xs font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-sm">Curiosity → creation</div>
         </div>
       </div>
-      <div className="relative border-t border-white/15 px-6 py-4 sm:px-10 xl:px-16"><div className="mx-auto flex max-w-[1472px] items-center justify-between gap-4 font-ui text-[10px] uppercase tracking-[0.18em] text-white/55 sm:text-xs"><span>Ideas are better together.</span><a href="#events" className="text-white hover:text-[#e99778]">Explore the club ↓</a></div></div>
+
     </section>
   );
 }
