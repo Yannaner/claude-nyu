@@ -3,6 +3,7 @@ const projects = [
   { number: '02', name: 'Pocket', category: 'Study tool', description: 'Turn your notes into a flashcard deck.', url: 'https://claude-nyu-pocket.vercel.app/', color: '#c9b7e8', mark: '✳' },
   { number: '03', name: 'Choice Lab', category: 'Decision tool', description: 'Compare your options with clarity.', url: 'https://claude-nyu-choice.vercel.app/', color: '#d8d7a9', mark: '↗' },
   { number: '04', name: 'Studio Board', category: 'Project planner', description: 'Organize tasks from idea to done.', url: 'https://claude-nyu-studio.vercel.app/', color: '#b8c9df', mark: '▦' },
+  { number: '05', name: 'Grade Lab', category: 'Grade planner', description: 'See what you need to reach your goal.', url: 'https://claude-nyu-grade.vercel.app/', color: '#c9d9bf', mark: '◒' },
 ];
 
 export default function BuilderClub() {
@@ -16,7 +17,7 @@ export default function BuilderClub() {
           <h2 className="font-heading text-5xl leading-[1.02] tracking-tight text-claude-dark sm:text-6xl">Ideas in <em className="text-claude-terracotta">action.</em></h2>
           <p className="max-w-xs font-body text-base text-claude-dark/70">Tools and ideas for NYU builders.</p>
         </div>
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <a key={project.name} href={project.url} target="_blank" rel="noopener noreferrer" className="group flex min-h-72 flex-col rounded-2xl border border-claude-dark/10 bg-claude-warm-white p-7 text-claude-dark transition-transform hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-claude-terracotta motion-reduce:transition-none motion-reduce:hover:translate-y-0">
               <div className="flex items-start justify-between"><span className="font-mono text-xs text-claude-dark/55">{project.number} / {project.category}</span><span aria-hidden="true" className="text-2xl">↗</span></div>
