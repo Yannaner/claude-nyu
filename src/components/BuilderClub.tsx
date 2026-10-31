@@ -1,9 +1,9 @@
 const projects = [
-  { number: '01', name: 'Orbit', category: 'Focus timer', description: 'Make space for one thing at a time.', url: 'https://claude-nyu-orbit.vercel.app/', color: '#e99778', mark: '◉' },
-  { number: '02', name: 'Pocket', category: 'Study tool', description: 'Turn your notes into a flashcard deck.', url: 'https://claude-nyu-pocket.vercel.app/', color: '#c9b7e8', mark: '✳' },
-  { number: '03', name: 'Choice Lab', category: 'Decision tool', description: 'Compare your options with clarity.', url: 'https://claude-nyu-choice.vercel.app/', color: '#d8d7a9', mark: '↗' },
-  { number: '04', name: 'Studio Board', category: 'Project planner', description: 'Organize tasks from idea to done.', url: 'https://claude-nyu-studio.vercel.app/', color: '#b8c9df', mark: '▦' },
-  { number: '05', name: 'Grade Lab', category: 'Grade planner', description: 'See what you need to reach your goal.', url: 'https://claude-nyu-grade.vercel.app/', color: '#c9d9bf', mark: '◒' },
+  { number: '01', name: 'Orbit', profile: 'Jason · Computer Science · Tandon ’28', category: 'Focus timer', description: 'Make space for one thing at a time.', url: 'https://claude-nyu-orbit.vercel.app/', color: '#e99778', mark: '◉' },
+  { number: '02', name: 'Pocket', profile: 'Ahmad · Computer Science · CAS ’27', category: 'Study tool', description: 'Turn your notes into a flashcard deck.', url: 'https://claude-nyu-pocket.vercel.app/', color: '#c9b7e8', mark: '✳' },
+  { number: '03', name: 'Choice Lab', profile: 'Maya · Finance · Stern ’27', category: 'Decision tool', description: 'Compare your options with clarity.', url: 'https://claude-nyu-choice.vercel.app/', color: '#d8d7a9', mark: '↗' },
+  { number: '04', name: 'Studio Board', profile: 'Alex · Integrated Design & Media · Tandon ’28', category: 'Project planner', description: 'Organize tasks from idea to done.', url: 'https://claude-nyu-studio.vercel.app/', color: '#b8c9df', mark: '▦' },
+  { number: '05', name: 'Grade Lab', profile: 'Sam · Mathematics · CAS ’26', category: 'Grade planner', description: 'See what you need to reach your goal.', url: 'https://claude-nyu-grade.vercel.app/', color: '#c9d9bf', mark: '◒' },
 ];
 
 export default function BuilderClub() {
@@ -24,6 +24,7 @@ export default function BuilderClub() {
               <div className="mt-10 flex h-14 w-14 items-center justify-center rounded-full text-2xl text-[#20211f]" style={{ backgroundColor: project.color }} aria-hidden="true">{project.mark}</div>
               <h3 className="mt-6 font-heading text-3xl">{project.name}</h3>
               <p className="mt-2 font-body text-sm text-claude-dark/70">{project.description}</p>
+              <p className="mt-4 font-ui text-xs leading-relaxed text-claude-dark/65">Sample profile (fictional): {project.profile}</p>
               <span className="mt-auto pt-6 font-ui text-xs font-semibold uppercase tracking-wider text-claude-terracotta">Try it <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></span>
             </a>
           ))}
