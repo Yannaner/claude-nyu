@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  --claude-dark: #191918;
+  --claude-cream: #faf9f5;
+  --claude-warm-white: #f4f3ee;
+  --claude-sand: #e8e0d0;
+  --claude-mid-gray: #b0aea5;
+  --claude-terracotta: #d97757;
+  --claude-terracotta-deep: #c15f3c;
+  --claude-sage: #788c5d;
+  --claude-blue: #6a9bcc;
+  --claude-light-gray: #e8e6dc;
+}
+
+html.dark {
+  --claude-dark: #e8e6dc;
+  --claude-cream: #121212;
+  --claude-warm-white: #1a1a1a;
+  --claude-sand: #2a2a2a;
+  --claude-mid-gray: #777;
+  --claude-light-gray: #2a2a2a;
+}
+
+@theme inline {
+  --color-claude-dark: var(--claude-dark);
+  --color-claude-cream: var(--claude-cream);
+  --color-claude-warm-white: var(--claude-warm-white);
+  --color-claude-sand: var(--claude-sand);
+  --color-claude-mid-gray: var(--claude-mid-gray);
+  --color-claude-terracotta: var(--claude-terracotta);
+  --color-claude-terracotta-deep: var(--claude-terracotta-deep);
+  --color-claude-sage: var(--claude-sage);
+  --color-claude-blue: var(--claude-blue);
+  --color-claude-light-gray: var(--claude-light-gray);
+
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Source Serif 4", serif;
+  --font-ui: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--claude-cream);
+  color: var(--claude-dark);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode overrides for elements using white/transparent backgrounds */
+html.dark .bg-white\/50 {
+  background-color: rgba(26, 26, 26, 0.5);
+}
+
+/* Shimmer orb animations */
+@keyframes drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(80px, -60px) scale(1.1); }
+  50% { transform: translate(-40px, 80px) scale(0.95); }
+  75% { transform: translate(60px, 40px) scale(1.05); }
+}
+
+@keyframes drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-70px, 50px) scale(1.05); }
+  50% { transform: translate(60px, -40px) scale(1.1); }
+  75% { transform: translate(-30px, -70px) scale(0.95); }
+}
+
+@keyframes drift-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(50px, 70px) scale(0.95); }
+  50% { transform: translate(-80px, -30px) scale(1.05); }
+  75% { transform: translate(40px, -60px) scale(1.1); }
+}
+
+.shimmer-orb-1 {
+  animation: drift-1 40s ease-in-out infinite;
+}
+
+.shimmer-orb-2 {
+  animation: drift-2 50s ease-in-out infinite;
+}
+
+.shimmer-orb-3 {
+  animation: drift-3 35s ease-in-out infinite;
+}
+
+/* Scroll indicator breathing */
+@keyframes breathe {
+  0%, 100% { opacity: 0.3; transform: scaleY(1); }
+  50% { opacity: 0.8; transform: scaleY(1.2); }
+}
+
+.scroll-indicator {
+  animation: breathe 3s ease-in-out infinite;
+}
+
+/* Underline wipe for links */
+.underline-wipe {
+  position: relative;
+}
+
+.underline-wipe::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--claude-terracotta);
+  transition: width 0.3s ease;
+}
+
+.underline-wipe:hover::after {
+  width: 100%;
+}
+
+/* Hide scrollbar for horizontal scroll */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
